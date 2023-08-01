@@ -84,13 +84,18 @@ const Logistration = (props) => {
 
   return (
     <BaseContainer>
-      <div>
+      <div className='content-align-center'>
+        {selectedPage === LOGIN_PAGE
+          ? <h1>Log in to your account</h1>
+          : <h1>Sign up</h1>}
+          
         {disablePublicAccountCreation
           ? (
             <>
               <Redirect to={updatePathWithQueryParams(LOGIN_PAGE)} />
               {institutionLogin && (
-                <Tabs defaultActiveKey="" id="controlled-tab" onSelect={handleInstitutionLogin}>
+                // register/sign up tabs
+                <Tabs defaultActiveKey="" id="controlled-tab" onSelect={handleInstitutionLogin}> 
                   <Tab title={tabTitle} eventKey={LOGIN_PAGE} />
                 </Tabs>
               )}
@@ -104,6 +109,7 @@ const Logistration = (props) => {
           )
           : (
             <div>
+              {/* IMPORTANT: register/sign up tabs */}
               {institutionLogin
                 ? (
                   <Tabs defaultActiveKey="" id="controlled-tab" onSelect={handleInstitutionLogin}>
@@ -121,7 +127,10 @@ const Logistration = (props) => {
               )}
               <div id="main-content" className="main-content">
                 {selectedPage === LOGIN_PAGE
-                  ? <LoginPage institutionLogin={institutionLogin} handleInstitutionLogin={handleInstitutionLogin} />
+                  ? 
+                  <div>
+                    <LoginPage institutionLogin={institutionLogin} handleInstitutionLogin={handleInstitutionLogin} />
+                  </div>
                   : (
                     <RegistrationPage
                       institutionLogin={institutionLogin}
