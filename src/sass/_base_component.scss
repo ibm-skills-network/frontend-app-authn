@@ -199,6 +199,8 @@
 
 // Below code was added by Skills Network (Efkan)
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
 .curve-container {
   position: relative;
   overflow: hidden;
@@ -225,4 +227,12 @@
 
 .pumpkin-orange-text {
   color: #f39c12;
+}
+
+.bigger-text {
+  font-size: 6rem;
+}
+
+.montserrat-font {
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
 }

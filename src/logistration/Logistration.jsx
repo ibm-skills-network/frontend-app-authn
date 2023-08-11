@@ -84,11 +84,12 @@ const Logistration = (props) => {
 
   return (
     <BaseContainer>
-      <div className='content-align-center'>
-        {selectedPage === LOGIN_PAGE
-          ? <h1>Log in to your account</h1>
-          : <h1>Sign up</h1>}
-          
+      <div className='content-align-center montserrat-font'>
+        <div className='logistration-title'>
+          {selectedPage === LOGIN_PAGE
+            ? <>Log in to your account</>
+            : <>Sign up</>}
+        </div>
         {disablePublicAccountCreation
           ? (
             <>
@@ -110,18 +111,20 @@ const Logistration = (props) => {
           : (
             <div>
               {/* IMPORTANT: register/sign up tabs */}
-              {institutionLogin
-                ? (
-                  <Tabs defaultActiveKey="" id="controlled-tab" onSelect={handleInstitutionLogin}>
-                    <Tab title={tabTitle} eventKey={selectedPage === LOGIN_PAGE ? LOGIN_PAGE : REGISTER_PAGE} />
-                  </Tabs>
-                )
-                : (!isValidTpaHint() && (
-                  <Tabs defaultActiveKey={selectedPage} id="controlled-tab" onSelect={handleOnSelect}>
-                    <Tab title={formatMessage(messages['logistration.register'])} eventKey={REGISTER_PAGE} />
-                    <Tab title={formatMessage(messages['logistration.sign.in'])} eventKey={LOGIN_PAGE} />
-                  </Tabs>
-                ))}
+              <div className='hide'>
+                {institutionLogin
+                  ? (
+                    <Tabs defaultActiveKey="" id="controlled-tab" onSelect={handleInstitutionLogin}>
+                      <Tab title={tabTitle} eventKey={selectedPage === LOGIN_PAGE ? LOGIN_PAGE : REGISTER_PAGE} />
+                    </Tabs>
+                  )
+                  : (!isValidTpaHint() && (
+                    <Tabs defaultActiveKey={selectedPage} id="controlled-tab" onSelect={handleOnSelect}>
+                      <Tab title={formatMessage(messages['logistration.register'])} eventKey={REGISTER_PAGE} />
+                      <Tab title={formatMessage(messages['logistration.sign.in'])} eventKey={LOGIN_PAGE} />
+                    </Tabs>
+                  ))}
+              </div>
               { key && (
                 <Redirect to={updatePathWithQueryParams(key)} />
               )}

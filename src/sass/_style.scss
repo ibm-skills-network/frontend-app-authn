@@ -97,6 +97,7 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
 }
 
 .btn-social {
+  position: static;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -105,10 +106,11 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
   font-size: 14px;
 
   background-color: $white;
-  border: 1px solid $font-blue;
-  width: 224px;
-  height: 36px;
-  color: $font-blue;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  width: 20.625rem;
+  height: 3rem;
+  color: #6b7280;
 
   .btn-tpa__image-icon{
     background-color: transparent;
@@ -133,14 +135,14 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
 }
 
 .btn-tpa__font-container {
-  background-color: $font-blue;
+  background-color: white;
   color: $white;
   font-size: 11px;
 
-  margin-left: -6px;
-  padding-top: 10px;
-  min-width: 30px;
-  height: 35px;
+  margin-left: 4px;
+  padding-top: 0px;
+  min-width: 25px;
+  height: 25px;
 }
 
 .btn-oa2-facebook {
@@ -347,6 +349,10 @@ select.form-control {
   &:hover {
     text-decoration: underline;
   }
+  font-size: 0.8rem;
+  margin: 0px;
+  padding: 0px;
+  color: #f39c12;
 }
 
 .icon-size {
@@ -365,6 +371,17 @@ select.form-control {
   font-size: 0.75rem;
 }
 
+.form-group__form-field {
+  min-width: 25rem;
+  max-width: 25rem;
+}
+
+.form-group__form-field input{
+  min-height: 2.8125rem;
+  border: 1px solid #e5e7eb;
+  color: #6b7280;
+}
+
 .form-group__form-field .form-control:focus ~ .pgn__form-control-floating-label .pgn__form-control-floating-label-content {
     font-size: 16px;
     color: $primary-700;
@@ -376,7 +393,10 @@ select.form-control {
 }
 
 .pgn__form-group {
-  margin-bottom: 1.75rem;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .form-text-size {
@@ -457,4 +477,114 @@ select.form-control {
 
 .pgn__form-control-decorator-trailing {
   right: 0 !important;
+}
+
+// Below code added by Skills Network (Efkan)
+
+.other-login-option-lite {
+  color: #7f7f7f;
+  font-weight: 275;
+  font-size: 1.35rem;
+  margin-bottom: 15px;
+}
+
+.pgn__stateful-btn {
+  background-color: #f39c12;
+  border: #f39c12;
+  font-weight: 600;
+  width: 100%;
+  min-height: 3rem;
+}
+
+.content-align-center {  // To adjust the width of the logistration div
+  width: 100%;
+  padding-right: 15%;
+  text-align: center;
+}
+
+.logistration-title {
+  font-size: 3.1rem;
+  color: #111827;
+  font-weight: 700;
+}
+
+.grid {
+  width: 100%;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  // background-color: #2196F3;
+  padding: 10px;
+  place-items: center;
+}
+
+@media (max-width: 1660px) {
+  .grid {
+    grid-template-columns: repeat(1, minmax(0,1fr));
+  }  
+}
+
+.login-button-width {
+  width: 25rem; /* A little narrower than the username-password input boxes */
+}
+
+.login-button-container {
+  width: 100%;
+}
+
+.margin-top-1rem {
+  margin-top: 1.65rem;
+}
+
+.margin-bottom-3rem {
+  margin-bottom: 3.5rem;
+}
+
+.forgot-password-container-inner {
+  width: 25rem; /* Same width as the username-password input boxes */
+  text-align: right;
+}
+
+.forgot-password-container-outer {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.letter-spacing-1 {
+  letter-spacing: 0.9px;
+}
+
+.hide {
+  display: none !important;
+}
+
+.sign-up-page-link {
+  color: #f39c12;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.sign-up-page-link:hover {
+  color: purple;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.signin-page-box {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #7f7f7f;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+.montserrat-font {
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+}
+
+.font-weight-500{
+  font-weight: 500;
 }

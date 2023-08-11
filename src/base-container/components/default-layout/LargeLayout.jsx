@@ -20,13 +20,17 @@ const LargeLayout = () => {
           <div className={classNames({ 'large-yellow-line mr-n4.5': getConfig().SITE_NAME === 'edX' })} />
           <h1
             className={classNames(
-              'display-2 text-white mw-xs',
+              'text-white mw-xs',
               { 'ml-6': getConfig().SITE_NAME !== 'edX' },
             )}
           >
-            {formatMessage(messages['start.learning'])}
-            <div className="pumpkin-orange-text">
-              {formatMessage(messages['with.site.name'], { siteName: getConfig().SITE_NAME })}
+            <div className='montserrat-font'>
+              <div className="bigger-text">
+                {formatMessage(messages['start.learning'])}
+              </div>
+              <div className="pumpkin-orange-text bigger-text">
+                {formatMessage(messages['with.site.name'], { siteName: getConfig().SITE_NAME })}
+              </div>
             </div>
           </h1>
         </div>
