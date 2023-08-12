@@ -89,3 +89,83 @@
   overflow-x: auto;
   display: inline-flex;
 }
+
+// Code below added by Skills Network (Efkan)
+
+#registration-form {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(1, minmax(0,1fr));
+}
+
+.small-margin-top {
+  margin-top: 1rem;
+}
+
+.small-margin-bottom {
+  margin-bottom: 1rem;
+}
+
+.contain-and-center {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+#register-user {
+  width: 25rem; // Same width as input forms
+  margin-bottom: 1rem;
+}
+
+.input-form-width {
+  width: 25rem; // Same width as input forms
+}
+
+#honor-code{
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  width: 25rem;
+  text-align: left;
+  color: #9ca3af;
+}
+
+.underlined{
+  text-decoration: underline;
+}
+
+.gray-text {
+  color: #7f7f7f;
+}
+
+.gray-text-light {
+  color: #9ca3af;
+}
+
+.login-page-box {
+  font-size: 0.9rem;
+}
+
+#login-page-link {
+  color: #f39c12;
+  transition: 0.2s;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#login-page-link:hover {
+  color: purple;
+  transition: 0.2s;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.grid-2 {
+  width: 100%;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  padding: 10px;
+  place-items: center;
+}

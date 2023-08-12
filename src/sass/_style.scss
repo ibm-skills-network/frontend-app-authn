@@ -393,7 +393,6 @@ select.form-control {
 }
 
 .pgn__form-group {
-  margin-bottom: 0;
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
@@ -513,7 +512,6 @@ select.form-control {
   display: grid;
   gap: 5px;
   grid-template-columns: repeat(2, minmax(0,1fr));
-  // background-color: #2196F3;
   padding: 10px;
   place-items: center;
 }
@@ -534,6 +532,10 @@ select.form-control {
 
 .margin-top-1rem {
   margin-top: 1.65rem;
+}
+
+.margin-bottom-1rem {
+  margin-bottom: 1.65rem;
 }
 
 .margin-bottom-3rem {
@@ -563,13 +565,13 @@ select.form-control {
 .sign-up-page-link {
   color: #f39c12;
   font-weight: 500;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .sign-up-page-link:hover {
   color: purple;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.2s;
   text-decoration: none;
 }
 
