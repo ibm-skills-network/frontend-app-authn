@@ -581,6 +581,7 @@ const RegistrationPage = (props) => {
             <Form id="registration-form" name="registration-form">
               <FormGroup
                 name="name"
+                className="grid-1"
                 value={formFields.name}
                 handleChange={handleOnChange}
                 handleBlur={handleOnBlur}
@@ -591,6 +592,7 @@ const RegistrationPage = (props) => {
               />
               <EmailField
                 name="email"
+                className="grid-1"
                 value={formFields.email}
                 handleChange={handleOnChange}
                 handleBlur={handleOnBlur}
@@ -604,7 +606,7 @@ const RegistrationPage = (props) => {
               />
               <UsernameField
                 name="username"
-                className="small-margin-bottom"
+                className="small-margin-bottom grid-1"
                 spellCheck="false"
                 value={formFields.username}
                 handleBlur={handleOnBlur}

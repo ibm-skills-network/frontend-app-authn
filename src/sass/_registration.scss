@@ -161,6 +161,14 @@
   cursor: pointer;
 }
 
+.grid-1 {
+  width: 100%;
+  display: grid !important;
+  gap: 5px;
+  grid-template-columns: repeat(1, minmax(0,1fr));
+  place-items: center;
+}
+
 .grid-2 {
   width: 100%;
   display: grid;
