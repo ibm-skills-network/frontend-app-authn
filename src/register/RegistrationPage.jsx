@@ -520,6 +520,12 @@ const RegistrationPage = (props) => {
     registerUser();
   };
 
+  const clickLoginPage = () => {
+    const loginTab = document.querySelector('[id="controlled-tab-tab-/login"]');
+    console.log(loginTab);
+    loginTab.click();
+  };
+
   useEffect(() => {
     if (autoSubmitRegisterForm && userPipelineDataLoaded) {
       registerUser();
@@ -658,7 +664,7 @@ const RegistrationPage = (props) => {
               </div>
               <div className='contain-and-center'>
                 <div className="login-page-box gray-text">
-                  Already have an account? <a id='login-page-link'>Log in here</a>
+                  Already have an account? <a id='login-page-link' onClick={clickLoginPage}>Log in here</a>
                 </div>
               </div>
               {!registrationEmbedded && (
