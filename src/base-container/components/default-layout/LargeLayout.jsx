@@ -36,8 +36,8 @@ const LargeLayout = () => {
         </div>
       </div>
       <div className="col-md-3 bg-white p-0">
-        <div class='curve-container'>
-          <div class='curve-divider'></div>
+        <div className='curve-container'>
+          <div className='curve-divider'></div>
         </div>
       </div>
     </div>
