@@ -108,7 +108,6 @@ const RegistrationPage = (props) => {
   const {
     providers, currentProvider, secondaryProviders, finishAuthUrl,
   } = thirdPartyAuthContext;
-  const providers_temp = ['Google', 'Facebook', 'Github', 'LinkedIn', 'IBMid'] // SN-TODO: Delete this
   const platformName = getConfig().SITE_NAME;
   const buttonLabel = cta ? formatMessage(messages['create.account.cta.button'], { label: cta }) : formatMessage(messages['create.account.for.free.button']);
 
@@ -673,8 +672,7 @@ const RegistrationPage = (props) => {
                 <div className='mt-4'>
                   <ThirdPartyAuth
                     currentProvider={currentProvider}
-                    // providers={providers}    // SN-TODO: Uncomment this
-                    providers={providers_temp}  // SN-TODO: Delete this
+                    providers={providers}
                     secondaryProviders={secondaryProviders}
                     handleInstitutionLogin={handleInstitutionLogin}
                     thirdPartyAuthApiStatus={thirdPartyAuthApiStatus}

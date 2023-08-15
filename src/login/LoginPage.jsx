@@ -163,25 +163,16 @@ class LoginPage extends React.Component {
   }
 
   clickRegisterPage() {
-    // const registerTab = document.querySelector("#controlled-tab-tab-/register");
     const registerTab = document.querySelector('[id="controlled-tab-tab-/register"]');
     console.log(registerTab);
     registerTab.click();
   };
 
   // Third party login button renderers
-  // SN-TODO: Temporarily set to true to visualize with auth buttons present.
-  //          Disable this to the factory setting before deployment
   renderThirdPartyAuth(providers, secondaryProviders, currentProvider, thirdPartyAuthApiStatus, intl) {
     const isInstitutionAuthActive = !!secondaryProviders.length && !currentProvider;
-    // const isSocialAuthActive = !!providers.length && !currentProvider;       // SN-TODO: Uncomment this
-    // const isEnterpriseLoginDisabled = getConfig().DISABLE_ENTERPRISE_LOGIN;  // SN-TODO: Uncomment this
-    const isSocialAuthActive = true;        // SN-TODO: Delete this
-    const isEnterpriseLoginDisabled = true; // SN-TODO: Delete this
-
-    // Temporarily added dummy providers to be able to visualize
-    // third party auth buttons
-    providers = ['Google', 'Facebook', 'Github', 'LinkedIn', 'IBMid'] // SN-TODO: Delete this
+    const isSocialAuthActive = !!providers.length && !currentProvider;     
+    const isEnterpriseLoginDisabled = getConfig().DISABLE_ENTERPRISE_LOGIN;
 
     return (
       <div>
