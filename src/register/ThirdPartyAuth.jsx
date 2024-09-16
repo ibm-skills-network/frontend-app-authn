@@ -29,7 +29,7 @@ const ThirdPartyAuth = (props) => {
   return (
     <>
       {((isEnterpriseLoginDisabled && isInstitutionAuthActive) || isSocialAuthActive) && (
-        <div className="mt-4 mb-3 h4">
+        <div className="gray-text">
           {formatMessage(messages['registration.other.options.heading'])}
         </div>
       )}
@@ -45,7 +45,7 @@ const ThirdPartyAuth = (props) => {
             />
           )}
           {isSocialAuthActive && (
-            <div className="row m-0">
+            <div className="grid-2">
               <SocialAuthProviders socialAuthProviders={providers} referrer={REGISTER_PAGE} />
             </div>
           )}

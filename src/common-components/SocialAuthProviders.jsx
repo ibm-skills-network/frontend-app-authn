@@ -26,7 +26,7 @@ const SocialAuthProviders = (props) => {
       id={provider.id}
       key={provider.id}
       type="button"
-      className={`btn-social btn-${provider.id} ${index % 2 === 0 ? 'mr-3' : ''}`}
+      className={`btn-social btn-${provider.id} `}
       data-provider-url={referrer === LOGIN_PAGE ? provider.loginUrl : provider.registerUrl}
       onClick={handleSubmit}
     >

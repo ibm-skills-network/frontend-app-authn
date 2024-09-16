@@ -66,7 +66,7 @@ const messages = defineMessages({
   },
   'registration.other.options.heading': {
     id: 'registration.other.options.heading',
-    defaultMessage: 'Or register with:',
+    defaultMessage: 'or Sign Up with:',
     description: 'A message that appears above third party auth providers i.e saml, google, facebook etc',
   },
   'create.account.cta.button': {
