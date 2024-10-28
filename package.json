@@ -71,7 +71,7 @@
     "@edx/frontend-build": "13.0.14",
     "@edx/reactifex": "1.1.0",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.8.0",
-    "babel-plugin-formatjs": "10.5.20",
+    "babel-plugin-formatjs": "10.5.22",
     "enzyme": "3.11.0",
     "eslint-plugin-import": "2.31.0",
     "glob": "7.2.3",
