@@ -519,6 +519,12 @@ const RegistrationPage = (props) => {
     registerUser();
   };
 
+  const clickLoginPage = () => {
+    const loginTab = document.querySelector('[id="controlled-tab-tab-/login"]');
+    console.log(loginTab);
+    loginTab.click();
+  };
+
   useEffect(() => {
     if (autoSubmitRegisterForm && userPipelineDataLoaded) {
       registerUser();
@@ -557,7 +563,7 @@ const RegistrationPage = (props) => {
         ) : (
           <div
             className={classNames(
-              'mw-xs mt-3',
+              '',
               { 'w-100 m-auto pt-4 main-content': registrationEmbedded },
             )}
           >
@@ -574,6 +580,7 @@ const RegistrationPage = (props) => {
             <Form id="registration-form" name="registration-form">
               <FormGroup
                 name="name"
+                className="grid-1"
                 value={formFields.name}
                 handleChange={handleOnChange}
                 handleBlur={handleOnBlur}
@@ -584,6 +591,7 @@ const RegistrationPage = (props) => {
               />
               <EmailField
                 name="email"
+                className="grid-1"
                 value={formFields.email}
                 handleChange={handleOnChange}
                 handleBlur={handleOnBlur}
@@ -597,6 +605,7 @@ const RegistrationPage = (props) => {
               />
               <UsernameField
                 name="username"
+                className="small-margin-bottom grid-1"
                 spellCheck="false"
                 value={formFields.username}
                 handleBlur={handleOnBlur}
@@ -620,6 +629,7 @@ const RegistrationPage = (props) => {
                   floatingLabel={formatMessage(messages['registration.password.label'])}
                 />
               )}
+              {/* Below component ConfigurableRegistrationForm shows up as <div></div> in DOM */}
               <ConfigurableRegistrationForm
                 countryList={countryList}
                 email={formFields.email}
@@ -631,28 +641,43 @@ const RegistrationPage = (props) => {
                 setFocusedField={setFocusedField}
                 fieldDescriptions={fieldDescriptions}
               />
-              <StatefulButton
-                id="register-user"
-                name="register-user"
-                type="submit"
-                variant="brand"
-                className="register-button mt-4 mb-4"
-                state={submitState}
-                labels={{
-                  default: buttonLabel,
-                  pending: '',
-                }}
-                onClick={handleSubmit}
-                onMouseDown={(e) => e.preventDefault()}
-              />
-              {!registrationEmbedded && (
-                <ThirdPartyAuth
-                  currentProvider={currentProvider}
-                  providers={providers}
-                  secondaryProviders={secondaryProviders}
-                  handleInstitutionLogin={handleInstitutionLogin}
-                  thirdPartyAuthApiStatus={thirdPartyAuthApiStatus}
+              <div className='contain-and-center'>
+                <div id="honor-code">
+                  By creating an account, you agree to the <a className='gray-text-light underlined' href='https://apps.cognitiveclass.ai/authn/register?next=%2Foauth2%2Fauthorize%3Fclient_id%3DXCTzu9NHWn%26redirect_uri%3Dhttps%253A%252F%252Fcognitiveclass.ai%252Fauth%252Fopen_edx%252Fcallback%26response_type%3Dcode%26scope%3Duser_id%2Bprofile%2Bemail%26state%3D6b59ac31a83be0265e7085bd29f3fea52a7a0d0d38d36230#'>Terms of Service and Honor Code</a> and you acknowledge that Cognitive Class and each Member 
+                  process your personal data in accordance with the <a className='gray-text-light underlined' href='https://apps.cognitiveclass.ai/authn/register?next=%2Foauth2%2Fauthorize%3Fclient_id%3DXCTzu9NHWn%26redirect_uri%3Dhttps%253A%252F%252Fcognitiveclass.ai%252Fauth%252Fopen_edx%252Fcallback%26response_type%3Dcode%26scope%3Duser_id%2Bprofile%2Bemail%26state%3D6b59ac31a83be0265e7085bd29f3fea52a7a0d0d38d36230#'>Privacy Policy</a>.
+                </div>
+              </div>
+              <div className='contain-and-center'>
+                <StatefulButton
+                  id="register-user"
+                  name="register-user"
+                  type="submit"
+                  variant="brand"
+                  className="register-button mt-4 input-form-width"
+                  state={submitState}
+                  labels={{
+                    default: buttonLabel,
+                    pending: '',
+                  }}
+                  onClick={handleSubmit}
+                  onMouseDown={(e) => e.preventDefault()}
                 />
+              </div>
+              <div className='contain-and-center'>
+                <div className="login-page-box gray-text">
+                  Already have an account? <a id='login-page-link' onClick={clickLoginPage}>Log in here</a>
+                </div>
+              </div>
+              {!registrationEmbedded && (
+                <div className='mt-4'>
+                  <ThirdPartyAuth
+                    currentProvider={currentProvider}
+                    providers={providers}
+                    secondaryProviders={secondaryProviders}
+                    handleInstitutionLogin={handleInstitutionLogin}
+                    thirdPartyAuthApiStatus={thirdPartyAuthApiStatus}
+                  />
+                </div>
               )}
             </Form>
           </div>

@@ -19,12 +19,12 @@ const messages = defineMessages({
   },
   'sign.in.button': {
     id: 'sign.in.button',
-    defaultMessage: 'Sign in',
+    defaultMessage: 'Login',
     description: 'Sign in button label that appears on login page',
   },
   'forgot.password': {
     id: 'forgot.password',
-    defaultMessage: 'Forgot password',
+    defaultMessage: 'Forgot password?',
     description: 'Button text for forgot password',
   },
   'institution.login.button': {
@@ -44,7 +44,7 @@ const messages = defineMessages({
   },
   'login.other.options.heading': {
     id: 'login.other.options.heading',
-    defaultMessage: 'Or sign in with:',
+    defaultMessage: 'or Sign in with Email:',
     description: 'Text that appears above other sign in options like social auth buttons',
   },
   'non.compliant.password.title': {
