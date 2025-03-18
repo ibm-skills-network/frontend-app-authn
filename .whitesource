@@ -1,8 +1,0 @@
-{
-  "settingsInheritedFrom": "ibm-skills-network/mend-config@main",
-  "scanSettingsSAST": {
-    "baseBranches": [
-      "master"
-    ]
-  }
-}
