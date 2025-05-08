@@ -60,6 +60,7 @@ const BaseContainer = ({ children, showWelcomeBanner }) => {
     <>
       <div className="col-md-12 extra-large-screen-top-stripe" />
       <div className="layout">
+        {/* SN-TODO: Update Small and Medium layouts according to Large */}
         <MediaQuery maxWidth={breakpoints.small.maxWidth - 1}>
           {authenticatedUser ? <AuthSmallLayout username={username} /> : <DefaultSmallLayout />}
         </MediaQuery>
